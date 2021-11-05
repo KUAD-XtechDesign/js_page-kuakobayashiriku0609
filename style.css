@@ -98,13 +98,13 @@ li{
      object-fit: cover;
 }
 
-#about ul {
+#address ul {
    margin-bottom: 30px;
 }
-#about li:first-child {
+#address li:first-child {
    margin-bottom: 30px;
 } 
-#about p {
+#address p {
     text-align: justify;
 }
 
