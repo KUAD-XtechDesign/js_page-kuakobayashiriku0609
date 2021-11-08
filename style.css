@@ -282,10 +282,3 @@ li{
 }
 
 
-.fadeIn {
-    opacity: 0;
-    transition: 2s;
-  }
-  .fadeIn.is-show {
-    opacity: 1;
-  }
