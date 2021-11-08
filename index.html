@@ -62,7 +62,25 @@
            </ul>
            <p>初めまして、小林です。<br>
             
-            </p>
+            <div class="omi">
+              <button onclick="draw()">小林の好きな言葉を見る</button>
+              <p>私の好きな言葉の一つは、<span id="fortune" class="fortune">？</span>だ。</p>
+              <div>
+      　　　　　<script>
+               const results = [
+                 '苦しいこともあるだろう。言いたいこともあるだろう。言いたいこともあるだろう。不満なこともあるだろう。腹の立つこともあるだろう。泣きたいこともあるだろう。これをじっとこれをじっと堪えていくのが男の修行である。',
+                 'やってみせて、言って聞かせて、やらせてみて、ほめてやらねば、人は動かじ。話し合い、耳を傾け、承認し、任せてやらねば、人は育たず。やっている、姿を感謝で見守って、信頼せねば、人は実らず。',
+                 '実年者は、今どきの若い者などということを絶対に言うな。なぜなら、われわれ実年者が若かった時に同じことを言われたはずだ。今どきの若者は全くしょうがない、年長者に対して礼儀を知らぬ、道で会っても挨拶もしない、いったい日本はどうなるのだ、などと言われたものだ。その若者が、こうして年を取ったまでだ。だから、実年者は若者が何をしたか、などと言うな｡何ができるか、とその可能性を発見してやってくれ。',
+                 '人は誰でも負い目を持っている。それを克服しようとして進歩するものなのだ。',
+               ]
+     
+     　　　　　　function draw(){
+                 const key = Math.floor (Math.random()*4)
+                console.log(key)
+                 const fortune = document.getElementById("fortune")
+                 fortune.textContent = results[key]
+     　　　　}
+      　　　　　</script>
 
          </section>
 　　　　　
@@ -108,25 +126,7 @@
 
          </section>
 
-         <div class="omi">
-         <button onclick="draw()">おみくじを引く</button>
-         <p>今年のあなたの運勢は、<span id="fortune" class="fortune">大吉</span>です！</p>
-         <div>
- 　　　　　<script>
-          const results = [
-            '大吉',
-            '中吉',
-            '小吉',
-            '中吉',
-          ]
-
-　　　　　　function draw(){
-            const key = Math.floor (Math.random()*4)
-           console.log(key)
-            const fortune = document.getElementById("fortune")
-            fortune.textContent = results[key]
-　　　　}
- 　　　　　</script>
+       
 
 
       </main>
