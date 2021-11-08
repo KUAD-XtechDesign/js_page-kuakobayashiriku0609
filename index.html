@@ -16,6 +16,7 @@
   <div class="hero">
   
   </div>
+
   <script>
     $(".line").animate({"width":"100%"},1500,function(){
       $(".line").css("right",0)
@@ -25,6 +26,7 @@
       })
     })
   </script>
+
      <header id="header">
     <h1 class="site-title">クロミア</h1>
     <nav>
@@ -38,6 +40,8 @@
       </ul>
     </nav>
       </header> 
+
+<script src="script.js"></script>
 
       <main>
          <div id="mainvisual">
@@ -61,9 +65,7 @@
             </p>
 
          </section>
-　　　　　　
-         　　　　
-          
+　　　　　
 
          <section id="works" class="wrapper">
              <h2 class="sec-tittle">works</h2>
@@ -89,6 +91,7 @@
 
          </section>
 
+         
          <section id="contact" class="wrapper"> 
            <h2 class="sec-tittle">contact</h2>
            <form action="#" method="post">
@@ -104,6 +107,19 @@
            </form>
 
          </section>
+
+         <div class="omi">
+         <button onclick="draw()">おみくじを引く</button>
+         <p>今年のあなたの運勢は、<span id="fortune" class="fortune">大吉</span>です！</p>
+         <div>
+ 　　　　　<script>
+　　　　　　function draw(){
+            const fortune = document.getElementById("fortune")
+            fortune.textContent = 'test'
+　　　　}
+ 　　　　　</script>
+
+
       </main>
       　<footer id="footer">
         <p> &copy; 2021 クロミア all right rserved</p>
