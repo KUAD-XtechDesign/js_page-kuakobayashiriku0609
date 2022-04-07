@@ -1,19 +1,147 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>トップページ</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/lightbox.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+</head>
+<script src="js/lightbox.min.js"></script>
+<body>
+  <div class="up"></div>
+  <div class="down"></div>
+  <div class="line"></div>
+  <div class="hero">
+  
+  </div>
 
-    <!-- 必要なライブラリをネット上から直接参照 CDN -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.rawgit.com/filipelinhares/ress/master/dist/ress.min.css"/>
-    <!-- 自分のcss -->
-    <link rel="stylesheet" href="./css/style.css" />
-    <!-- 自分のjs -->
-    <script src="./js/script.js"></script>
-    <title>index</title>
-  </head>
-  <body>
-    
-  </body>
+  <script>
+    $(".line").animate({"width":"100%"},1500,function(){
+      $(".line").css("right",0)
+      $(".line").animate({"width":"0%"},function(){
+        $(".up").animate({"height":"0%"});
+        $(".down").animate({"height":"0%"});
+      })
+    })
+  </script>
+
+     <header id="header">
+    <h1 class="site-title">mypages</h1>
+    <nav>
+      <ul>
+      
+       <li>
+         <a href="http://www.instagram.com/riku69auk" target="_blank">
+          <img class="icon" src="images/ore.jpeg" alt="instagram">
+        </a>
+       </li>
+      </ul>
+    </nav>
+      </header> 
+
+<script src="script.js"></script>
+
+      <main>
+         <div id="mainvisual">
+           <picture>
+             <source media="(max-width: 600px)" srcset="img/#">  
+             <img src="images/ike.JPG" alt="tekisuto">
+           </picture>
+          
+         </div>
+         <section id="address" class="wrapper">
+           <h2 class="sec-tittle">address</h2>
+           <ul>
+             <li>小林</li>
+             <li>Kyouto, sakyouku, kyouto 00000 Japan</li>
+             <li>tel: 000-1111-2222</li>
+             <li>url:www.xxxxx.jp</li>
+             <li>mail:xxx@aaaaaa.jp</li>
+           </ul>
+           <p>初めまして、小林です。<br>
+            
+            <div class="omi">
+              <button onclick="draw()">小林の好きな言葉を見る</button>
+              <p>私の好きな言葉の一つは、<span id="fortune" class="fortune">？</span>だ。</p>
+              <div>
+      　　　　　<script>
+               const results = [
+                 '苦しいこともあるだろう。言いたいこともあるだろう。言いたいこともあるだろう。不満なこともあるだろう。腹の立つこともあるだろう。泣きたいこともあるだろう。これをじっとこれをじっと堪えていくのが男の修行である。',
+                 'やってみせて、言って聞かせて、やらせてみて、ほめてやらねば、人は動かじ。話し合い、耳を傾け、承認し、任せてやらねば、人は育たず。やっている、姿を感謝で見守って、信頼せねば、人は実らず。',
+                 '実年者は、今どきの若い者などということを絶対に言うな。なぜなら、われわれ実年者が若かった時に同じことを言われたはずだ。今どきの若者は全くしょうがない、年長者に対して礼儀を知らぬ、道で会っても挨拶もしない、いったい日本はどうなるのだ、などと言われたものだ。その若者が、こうして年を取ったまでだ。だから、実年者は若者が何をしたか、などと言うな｡何ができるか、とその可能性を発見してやってくれ。',
+                 '人は誰でも負い目を持っている。それを克服しようとして進歩するものなのだ。',
+               ]
+     
+     　　　　　　function draw(){
+                 const key = Math.floor (Math.random()*4)
+                console.log(key)
+                 const fortune = document.getElementById("fortune")
+                 fortune.textContent = results[key]
+     　　　　}
+      　　　　　</script>
+
+         </section>
+　　　　
+       
+         <section id="works" class="wrapper">
+             <h2 class="sec-tittle">works</h2>
+          <ul>
+             <li><img src="images/same.JPG" alt="aaaa"></li>
+             <a href="images/same.JPG" data-lightbox="demo">↑拡大画像はこちらをクリック</a>
+             <li><img src="images/ヒヨコ.png" alt="aaaa"></li>
+             <a href="images/ヒヨコ.png" data-lightbox="demo">↑拡大画像はこちらをクリック</a>
+             <li><img src="images/sdgs.jpg" alt="aaaa"></li>
+             <a href="images/sdgs.jpg" data-lightbox="demo">↑拡大画像はこちらをクリック</a>
+             <li><img src="images/neko.JPG" alt="aaaa"></li>
+             <a href="images/neko.JPG" data-lightbox="demo">↑拡大画像はこちらをクリック</a>
+          </ul>
+         </section>
+
+         <section id="career" class="wrapper">
+           <h2 class="sec-tittle">Career</h2>
+           <dl>
+             <dt>2021.３.</dt>
+             <dd>中越高校　卒業</dd>
+             <dt>2021.4.1</dt>
+             <dd>京都芸術大学に入学しました。</dd>
+             <dt>20xx.xx,xx</dt>
+             <dd>未来のことはわからない。</dd>
+
+           </dl>
+
+         </section>
+
+         
+         <section id="contact" class="wrapper"> 
+           <h2 class="sec-tittle">contact</h2>
+           <form action="#" method="post">
+             <dl>
+               <dt><label for="name">Name</label></dt>
+               <dd><input type="text" id="name" name="your-name"></dd>
+               <dt><label for="email">Email</label></dt>
+               <dd><input type="email" id="email"　　name="your-email"></dd>
+               <dt><label for="massage">Massage</label></dt>
+               <dd><textarea name="your-messag" id="message" ></textarea></dd>
+             </dl>
+             <div class="button"><input type="submit" value="send"></div>
+           </form>
+
+         </section>
+
+       
+
+
+      </main>
+      　<footer id="footer">
+        <p> &copy; 2021 クロミア all right rserved</p>
+
+      </footer>
+ 
+</body>
+
+
+　
 </html>
